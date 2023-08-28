@@ -1,11 +1,8 @@
 version: '3'
 services:
-  py-dev:
-    image: python
-    command: >
-      bash -c "
-        apt-get update && apt-get install -y vim;
-        tail -f /dev/null"
+  python-dev:
+    build:
+    context: ./python-dev
     restart: always
     cpus: 24
     mem_limit: 96g
