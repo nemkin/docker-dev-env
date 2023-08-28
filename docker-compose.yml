@@ -4,12 +4,11 @@ services:
   python-dev:
     build:
       context: ./python-dev
-    restart: always
     volumes:
       - ./root:/root
-
-deploy:
-  resources:
-    limits:
-      cpus: '24'
-      memory: 96G
+    deploy:
+      resources:
+        limits:
+          cpus: '24'
+          memory: 96G
+    restart: always
