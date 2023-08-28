@@ -8,7 +8,8 @@ services:
     volumes:
       - ./root:/root
 
-resources:
-  limits:
-    cpus: 24
-    memory: 96g
+deploy:
+  resources:
+    limits:
+      cpus: '24'
+      memory: 96G
