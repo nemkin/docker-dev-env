@@ -1,10 +1,14 @@
 version: '3'
+
 services:
   python-dev:
     build:
-    context: ./python-dev
+      context: ./python-dev
     restart: always
-    cpus: 24
-    mem_limit: 96g
     volumes:
       - ./root:/root
+
+resources:
+  limits:
+    cpus: 24
+    memory: 96g
