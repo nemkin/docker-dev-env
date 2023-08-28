@@ -3,6 +3,8 @@ services:
   py-dev:
     image: python
     command: tail -f /dev/null
+    restart: always
+    cpus: 24
+    mem_limit: 96g
     volumes:
       - ./root:/root
-    restart: always
