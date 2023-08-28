@@ -1,0 +1,8 @@
+version: '3'
+services:
+  py-dev:
+    image: python
+    command: tail -f /dev/null
+    volumes:
+      - ./root:/root
+    restart: always
