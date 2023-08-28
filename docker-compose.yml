@@ -6,9 +6,6 @@ services:
       context: ./python-dev
     volumes:
       - ./root:/root
-    deploy:
-      resources:
-        limits:
-          cpus: '24'
-          memory: 96G
+    cpus: 24
+    memory: 96G
     restart: always
